@@ -35,6 +35,17 @@ previous.addEventListener("click",
 
     if(activeItem < img.length ){
 
+        img[activeItem].classList.remove("active")
+
+        activeItem--
+
+        img[activeItem].classList.add("active")
+
+        if(activeItem ===  img.length  ){
+
+            previous.classList.add("hidden")
+        }
     }
 }
 )
+
