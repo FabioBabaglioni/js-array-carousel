@@ -24,6 +24,8 @@ next.addEventListener("click",
         if(activeItem === img.length - 1){
 
             next.classList.add("hidden")
+        }else{
+            previous.classList.remove("hidden")
         }
     }
 }
@@ -32,8 +34,7 @@ next.addEventListener("click",
 previous.addEventListener("click",
 
     function(){
-
-    if(activeItem < img.length ){
+    if(activeItem <= img.length - 1 ){
 
         img[activeItem].classList.remove("active")
 
@@ -41,9 +42,11 @@ previous.addEventListener("click",
 
         img[activeItem].classList.add("active")
 
-        if(activeItem ===  img.length  ){
+        if(activeItem == 0){
 
             previous.classList.add("hidden")
+        }else{
+            next.classList.remove("hidden")
         }
     }
 }
